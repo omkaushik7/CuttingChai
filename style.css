@@ -171,6 +171,9 @@ nav ul :hover{
 
 }
 @media (max-width:460px){
+    body{
+        background-position-x: center
+    }
     nav ul{
         right: 0;
     }
@@ -187,7 +190,7 @@ nav ul :hover{
         margin: 118px 0 0 25px;
     }
     .heading{
-        font-size: 55px;
+        font-size: 50px;
     }
     .box{
         margin: 49px 100px 0 25px;
