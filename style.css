@@ -1,26 +1,25 @@
 *{
     margin: 0;
-    padding: 0;   
+    padding: 0; 
+    box-sizing: border-box;  
 }
 body{
     background: #fff4e8;
     font-family: 'Inter', sans-serif;
-    overflow: hidden;
     background-image: url(/content_boxchai\ cup.png);
     background-size: 1500px;
     background-repeat: no-repeat;
-    background-position-x: -150px;
+    background-position-x: center;
 }
 header{
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 35px 0 0 0;
-    position: relative;
-    z-index: 1;
 }
 nav ul{
     display: flex;
+    margin: 0 0 0 50px;
 }
 li{
     list-style: none; 
@@ -33,6 +32,12 @@ a{
 nav ul :hover{
     color:#F1B64D ;
 }
+.menu-btn i{
+    display: none;
+}
+#click{
+    display: none;
+}
 .logo{
     font-size: 28px;
     font-weight: bold;
@@ -44,20 +49,18 @@ nav ul :hover{
     color: #F1B64D;
 }
 .user{
-    background: white;
-    border-radius: 21px;
-    width: 40px;
-    height: 40px;
-    margin-right: -180px;
+    height: 32px;
+    display: flex;
 }
 .user-dp{
-    position: relative;
-    top: -3px;
-    left: -18px;
+    align-items: center;
+    display: flex;
+    margin: 0 0 -29px 0;
 }
 .user-name{
     font-size: 18px;
-    width: 128px;
+    display: flex;
+    align-items: center;
 }
 /* ///////////////////////////////////////////// */
 .flex{
@@ -68,8 +71,6 @@ nav ul :hover{
 .left-side{
     width: 360px;
     margin: 118px 0 0 142px;
-    position: relative;
-    z-index: 1;
 }
 .heading{
     font-size: 90px;
@@ -78,13 +79,15 @@ nav ul :hover{
 }
 .paragraph{
     margin: 34px 0 0 0;
+    color: #694D2C;
 }
 .btn{
     margin: 42px 0 0 0;
-    width: 100px;
-    height: 40px;
-    border-radius: 20px;
-    background: #F1B64D;
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    color: #694D2C;
+    background: #fbd183;
     border: none;
     cursor: pointer;
 }
@@ -107,6 +110,80 @@ nav ul :hover{
     position: relative;
     top: -175px;
     left: 74px;
+    color: #694D2C;
     font-size: 12px;
     width: 200px;
+}
+@media (max-width:800px){
+
+    .user{
+        margin: 0 0 0 -27px;
+    }
+    .user-dp{
+        margin: 0 0 -29px 0;
+    }
+    .user-name{
+        margin: 0 0 0 -14px;
+    }
+    .left-side{
+        margin: 118px 0 0 30px;
+    }
+}
+@media (max-width:700px){
+    header{
+        margin:0;
+
+    }
+    nav ul{
+        position: fixed;
+        right: 150px;
+        top: -100%;
+        display: block;
+        background: #f9e6d2;
+        padding: 30px;
+        border-radius: 8px;
+        text-align: center;
+        transition: all 0.3s cubic-bezier(.6,.04,.98,.34);
+    }
+    #click:checked ~ ul {
+        top: 15%;
+    }
+    #click{
+        display: none;
+    }
+    #click:checked ~ .menu-btn i:before{
+        content:"\f00d";
+    }
+    
+    .nav{
+        margin: 12px;
+    }
+    .menu-btn i{
+        display: block;
+        margin: 3rem 1rem;
+    }
+
+}
+@media (max-width:460px){
+    nav ul{
+        right: 0;
+    }
+    #click:checked ~ ul {
+        top:8%;
+    }
+    .menu-btn i{
+        margin: 23px 0px 21px 108px;
+    }
+    .user{
+        display: none;
+    }
+    .left-side{
+        margin: 118px 0 0 25px;
+    }
+    .heading{
+        font-size: 55px;
+    }
+    .box{
+        margin: 49px 100px 0 25px;
+    }
 }
